@@ -657,4 +657,30 @@ describe('vite-imagetools', () => {
       expect(createBasePath('http://localhost:9000/frontend/')).toBe('http://localhost:9000/frontend/@imagetools/')
     })
   })
+
+  test('async output format', async () => {
+    const bundle = (await build({
+      root: join(__dirname, '__fixtures__'),
+      logLevel: 'warn',
+      build: { write: false },
+      plugins: [
+        testEntry(`
+          import Image from "./with-metadata.png?run"
+          window.__IMAGE__ = Image
+        `),
+        imagetools({
+          extendOutputFormats: (defaults) => ({
+            ...defaults,
+            run: () => () => new Promise((resolve) => setTimeout(() => resolve('success'), 500))
+          })
+        })
+      ]
+    })) as RollupOutput | RollupOutput[]
+
+    const files = getFiles(bundle, '**.js') as OutputChunk[]
+    const { window } = new JSDOM(``, { runScripts: 'outside-only' })
+    window.eval(files[0].code)
+
+    expect(window.__IMAGE__).toBe('success')
+  })
 })
