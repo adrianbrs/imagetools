@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "@rollup/pluginutils": "^5.0.0",
-    "imagetools-core": "workspace:^"
+    "@adrianbrs/imagetools-core": "workspace:^"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.0.0",
@@ -51,7 +51,7 @@
     "@types/picomatch": "^2.3.0",
     "@types/sharp": "^0.31.0",
     "@vitest/coverage-c8": "^0.29.0",
-    "imagetools-core": "workspace:^",
+    "@adrianbrs/imagetools-core": "workspace:^",
     "jest-image-snapshot": "^6.0.0",
     "jsdom": "^21.0.0",
     "picomatch": "^2.3.1",

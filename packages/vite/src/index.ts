@@ -13,7 +13,7 @@ import {
   urlFormat,
   extractEntries,
   Logger
-} from 'imagetools-core'
+} from '@adrianbrs/imagetools-core'
 import { createFilter, dataToEsm } from '@rollup/pluginutils'
 import { VitePluginOptions } from './types'
 import { createBasePath } from './utils'
@@ -24,7 +24,7 @@ const defaultOptions: VitePluginOptions = {
   removeMetadata: true
 }
 
-export * from 'imagetools-core'
+export * from '@adrianbrs/imagetools-core'
 
 export function imagetools(userOptions: Partial<VitePluginOptions> = {}): Plugin {
   const pluginOptions: VitePluginOptions = { ...defaultOptions, ...userOptions }

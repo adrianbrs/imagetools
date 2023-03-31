@@ -1,4 +1,4 @@
-import { TransformFactory, OutputFormat, resolveConfigs } from 'imagetools-core'
+import { TransformFactory, OutputFormat, resolveConfigs } from '@adrianbrs/imagetools-core'
 
 export interface RollupPluginOptions {
   /**

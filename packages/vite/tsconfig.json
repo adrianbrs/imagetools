@@ -4,9 +4,9 @@
     "declaration": true,
     "outDir": "./dist",
     "paths": {
-      "imagetools-core": ["../core/dist"],
-      "vite-imagetools": ["../vite/dist"],
-      "rollup-plugin-imagetools": ["../rollup/dist"]
+      "@adrianbrs/imagetools-core": ["../core/dist"],
+      "@adrianbrs/vite-imagetools": ["../vite/dist"],
+      "@adrianbrs/rollup-plugin-imagetools": ["../rollup/dist"]
     }
   },
   "exclude": ["node_modules", "dist", "**/__tests__/**"]

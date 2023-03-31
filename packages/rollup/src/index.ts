@@ -10,7 +10,7 @@ import {
   urlFormat,
   extractEntries,
   Logger
-} from 'imagetools-core'
+} from '@adrianbrs/imagetools-core'
 import { createFilter, dataToEsm } from '@rollup/pluginutils'
 import { RollupPluginOptions } from './types'
 import MagicString from 'magic-string'
@@ -22,7 +22,7 @@ const defaultOptions: RollupPluginOptions = {
   removeMetadata: true
 }
 
-export * from 'imagetools-core'
+export * from '@adrianbrs/imagetools-core'
 
 export function imagetools(userOptions: Partial<RollupPluginOptions> = {}): Plugin {
   const pluginOptions: RollupPluginOptions = { ...defaultOptions, ...userOptions }
