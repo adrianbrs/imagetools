@@ -12,6 +12,9 @@
     "format": "prettier --write .",
     "doc": "pnpm run --filter imagetools-core build && typedoc"
   },
+  "publishConfig": {
+    "@adrianbrs:registry": "https://npm.pkg.github.com"
+  },
   "devDependencies": {
     "@changesets/cli": "^2.22.0",
     "@rollup/plugin-typescript": "^11.0.0",

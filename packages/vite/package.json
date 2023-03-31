@@ -1,8 +1,11 @@
 {
-  "name": "vite-imagetools",
+  "name": "@adrianbrs/vite-imagetools",
   "description": "Load and transform images using a toolbox of import directives!",
   "version": "4.0.18",
   "types": "dist/index.d.ts",
+  "publishConfig": {
+    "@adrianbrs:registry": "https://npm.pkg.github.com"
+  },
   "exports": {
     "./package.json": "./package.json",
     ".": {

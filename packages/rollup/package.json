@@ -1,7 +1,10 @@
 {
-  "name": "rollup-plugin-imagetools",
+  "name": "@adrianbrs/rollup-plugin-imagetools",
   "version": "3.0.17",
   "types": "dist/index.d.ts",
+  "publishConfig": {
+    "@adrianbrs:registry": "https://npm.pkg.github.com"
+  },
   "exports": {
     "./package.json": "./package.json",
     ".": {

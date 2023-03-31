@@ -1,7 +1,10 @@
 {
-  "name": "imagetools-core",
+  "name": "@adrianbrs/imagetools-core",
   "version": "3.3.1",
   "types": "dist/index.d.ts",
+  "publishConfig": {
+    "@adrianbrs:registry": "https://npm.pkg.github.com"
+  },
   "exports": {
     "./package.json": "./package.json",
     ".": {
